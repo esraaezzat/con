@@ -1,0 +1,16 @@
+
+
+ <li class="list-group-item "   *ngIf = "item.firstName==null  || item.firstName[0]==specialChar">
+    <div class="col-xs-12 col-sm-2">
+        <img [src]="item.img" alt="Scott Stevens" class="img-responsive img-circle" />
+    </div>
+    <div class="col-xs-12 col-sm-10 details">
+        <span class="name">{{item.firstName}}</span><br/>
+        <span class="contact"> 
+            <span class="text-muted" >{{item.mobileNumber}}</span><br/>
+            <span class="text-muted" >{{item.email}}</span><br/>
+    </span>
+       
+    </div>
+    <div class="clearfix"></div>
+</li>

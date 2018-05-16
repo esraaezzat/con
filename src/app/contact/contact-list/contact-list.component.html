@@ -1,0 +1,53 @@
+<!-- <a href="#a">A</a> -->
+<div class="container">
+  <div class="row txtcontainer">
+    <div class="col-sm-12 col-xs-12 txtSearch">
+      <div id="imaginary_container">
+        <div class="input-group stylish-input-group">
+
+          <input type="text" class="form-control" placeholder="Search" [(ngModel)]="txtSearch" (change)="onFiltered()">
+
+          <span class="input-group-addon">
+            <button type="submit">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row contactList ">
+
+    <div class="col-xs-11">
+
+      <ul class="list-group">
+
+        <li class='head row' id='newhead'>
+          <span class='col-xs-10' > New Contact </span>
+          
+         <a class="col-xs-1" [routerLink] = "['/AddNewContact']" > <i class="fas fa-plus"></i> </a>
+          
+          </li>
+        
+          <li class='head'>Latest Contacts  </li>
+        <app-contact-item [item]='item'  [specialChar]='item.firstName[0]' *ngFor="let item of LatestContacts"></app-contact-item>        
+      </ul>
+      <ul class="list-group" *ngFor='let char of alpha'>
+
+        <li [id]='char' class='head'>{{char}}</li>
+
+        <app-contact-item [item]='item' [specialChar]='char' *ngFor="let item of target"></app-contact-item>
+
+      </ul>
+
+
+    </div>
+
+    <div class='col-xs-1 alpha'>
+
+      <span><a *ngFor='let char of alpha' [href]="'#'+char">{{char}}</a></span>
+
+    </div>
+  </div>
+  

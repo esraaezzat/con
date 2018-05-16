@@ -1,0 +1,55 @@
+<div class="container">
+  <form>
+
+    <div class='row header'>
+      <span class="text-muted">Add a New Contact</span>
+      <hr>
+    </div>
+    <div class="row img">
+        
+        <input style="display: none" 
+        type="file" (change)="onFileChanged($event)" #fileInput>
+     
+
+      <img src="../../../assets/images/defaultimg.png" 
+      (click)="fileInput.click()" alt="Scott Stevens" class="img-responsive img-circle" />
+
+      <span class="text-muted">Add Photo</span>
+    </div>
+
+    <div class="input-group col-xs-12">
+      <input type="text" class="form-control" name='fname' [(ngModel)]='fname'
+       placeholder="First Name" aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group col-xs-12">
+      <input type="text" class="form-control" name='lname' [(ngModel)]='newContact.lastName'
+      placeholder="Last Name" aria-describedby="basic-addon1">
+    </div>
+
+    <div class='row'>
+
+    <div class=" col-md-2">
+      <input type="number" class="form-control" name="codeNo" placeholder="+44" 
+      [(ngModel)]='code'  aria-describedby="basic-addon1">
+    </div>
+
+    <div class=" col-md-10">
+      <input type="text" class="form-control" name = 'number' [(ngModel)]='contactNumber' 
+      placeholder="Number" >      
+    </div>
+
+  </div>
+
+    <div class="input-group col-xs-12">
+      <input type="email" class="form-control"name='emailaddress' [(ngModel)]='newContact.email'
+       placeholder="Email Address" >
+    </div>
+
+    <div class="row">
+      <button type="button" class="btn  btn-success col-xs-7 " (click)='onSave()'>Add Contact</button>
+    </div>
+    <div class='row'>
+      <button type="button" class="btn btn-primary col-xs-7" (click)='onCancel()'>Cancel</button>
+    </div>
+  </form>
+</div>

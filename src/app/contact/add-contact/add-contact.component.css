@@ -1,0 +1,55 @@
+/*form*/
+form{
+    border:1px solid gray;
+    padding: 20px;
+    width: 65%;
+    margin: auto;
+}
+.form-control{
+    margin-top: 20px;
+}
+/*header*/
+.header span{
+    margin-left: 5%;
+}
+ .text-muted{
+    color: #aea9a9;
+}
+
+hr{
+    border-top: 2px solid #bbeee1;
+    margin-top: 8px;
+}
+
+/*img*/
+.img{
+    margin: auto;
+    max-width: 13%;
+}
+.img img{
+    margin-bottom: 10px;
+    border-color: #aea9a9;
+    border-width: 2px;
+}
+.img img:hover{
+    cursor: pointer;
+}
+.img .text-muted {
+    margin-left: 20%;
+
+}
+
+
+input{
+    border: none;
+    border-bottom: 2px solid rgb(198, 225, 236);
+}
+
+.btn{
+    border-radius: 2%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20%;
+    
+}
+
